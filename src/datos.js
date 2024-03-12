@@ -33,10 +33,5 @@ export const productos=[
     nombre: "RECESVINTO",
     precio: 71,
     finDeSemana: false
-  },
-  {
-    nombre: "ervigio",
-    precio: 110,
-    finDeSemana: true
   }
 ]

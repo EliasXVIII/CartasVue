@@ -1,15 +1,23 @@
 
 <template>
-  <h2>Cena {{ contador + 1 /* este +1 es para que sume 1 pero el origen de contador no se modifa */ }} con el rey godo {{ rey }} </h2>
+  <h2>Cena {{ contador + 1 /* este +1 es para que sume 1 pero el origen de contador no se modifica, sabemos que un array comienza en 0 pero queda feo que empiece el contador para el usuario en 0*/ }} con el rey godo {{ rey }} </h2>
 
   <h3 class="precio">Precio: {{productos[contador].precio}}€</h3>
   
   <div v-if="productos[contador].finDeSemana" class="todosLosDias dias" >(solo fines de semana)</div>
   <div v-else  class="dias soloFinesDeSemana" >(de lun a dom)</div>
-  
-  <img :src="imagen" alt=""/> 
+  <br>
+
+  <div v-if="productos[contador].precio<100" class="oferta">
+    <div>ahora un 10% de descuento! {{ nuevoPrecio }} € <!-- esto no es una Variable es una propiedad computada -->
+    </div>
+  <img src="/oferta.jpg" alt="Rey Godo en Descuento"> <!-- voy a poner la ruta completa porque esta en public  -->
+  </div>
+
+
+  <img :src="imagen" alt=""/> <!-- imagen dinámica -->
   <!-- no olvidar colocar el ":src="para colocar la constante computada" -->
-  
+  <br>
   <button @:click="siguiente"> Siguiente ({{ contador + 1 }}/{{total}})</button>
 </template>
 
@@ -41,6 +49,8 @@ const imagen = computed(()=>{
     return `${ruta}${productos[contador.value].nombre.toLowerCase()}.png`;
 });
 
+const nuevoPrecio = computed(()=>{
+  return Number(productos[contador.value].precio/1.10).toFixed(2) });
 </script>
 
 
@@ -57,7 +67,28 @@ const imagen = computed(()=>{
   color: white;
   padding: 4px 17px;
   font-size: 1rem;
+  border-radius: 0.5rem;
   margin: 5px 0 10px;
-  display: inline-block; /* con display Inline Block hago que el ancho se adapte al contenido! */
+  display: inline-block; 
+  /* con display Inline Block hago que el ancho se adapte al contenido! */
+}
+.oferta{
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.oferta img{
+  width: 5rem;
+  height: auto;
+  
+}
+
+button{
+  margin: 1rem;;
+  border: none;
+  padding: 1rem;
+  width: 25rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
 }
 </style>
