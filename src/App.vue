@@ -20,6 +20,7 @@
   <!-- no olvidar colocar el ":src="para colocar la constante computada" -->
   <br>
   <button @:click="siguiente"> Siguiente ({{ contador + 1 }}/{{total}})</button>
+  <button @:click="atras"> Atrás ({{ contador }}/{{total}})</button>
 </div>
 </template>
 
@@ -40,6 +41,13 @@ const siguiente = ()=>{
 //con esta funcion hago que al hacer siguiente vuelva a empezar si el valor del contador supera el total de elementos del Array
 
 };
+
+const atras = ()=>{ 
+  contador.value-- 
+
+  if(contador.value>=total) //si el valor de contador es mayor o igual que la longitud total del []
+  contador.value=0;
+}; 
 
 const rey = computed (()=>{ //esto es una propiedad computada, se utiliza COMPUTED
   const elNombre=productos[contador.value].nombre.toLowerCase();  //atento a contador.value
