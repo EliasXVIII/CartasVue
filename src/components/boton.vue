@@ -11,20 +11,22 @@
  const contador = ref(0);
  const total = 10;
 
-const siguiente = ()=>{ 
+/* const siguiente = ()=>{ 
   contador.value++ ;
-  emit("siguiente",contador.value);
+ /*  emit("siguiente",contador.value); */
   
-  if(contador.value>=total) //si el valor de contador es mayor o igual que la longitud total del []
-  contador.value=0; //el contador vuelva a su valor 0, en este caso lo expresará como 1 por sumar valor 0del[]+1
-//con esta funcion hago que al hacer siguiente vuelva a empezar si el valor del contador supera el total de elementos del Array
+ const siguiente = () => { 
+  contador.value++; // Incrementa el contador
 
+  // Verifica si el contador ha alcanzado el valor total
+  if (contador.value >= total) {
+    contador.value = 0; // Reinicia el contador a 0 si es igual o mayor que el total
+  }
 };
-
 const atras = ()=>{ 
   contador.value--;
 
-  if(contador.value<0) //si el valor de contador es mayor o igual que la longitud total del []
+  if(atras = contador) //si el valor de contador es mayor o igual que la longitud total del []
   contador.value=0;
   emit("atras",contador.value);
 }; 
