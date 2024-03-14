@@ -24,7 +24,7 @@ const siguiente = ()=>{
 const atras = ()=>{ 
   contador.value--;
 
-  if(contador.value<o) //si el valor de contador es mayor o igual que la longitud total del []
+  if(contador.value<0) //si el valor de contador es mayor o igual que la longitud total del []
   contador.value=0;
   emit("atras",contador.value);
 }; 
