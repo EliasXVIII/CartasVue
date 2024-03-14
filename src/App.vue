@@ -14,40 +14,27 @@
     </div>
   <img src="/oferta.jpg" alt="Rey Godo en Descuento"> <!-- voy a poner la ruta completa porque esta en public  -->
   </div>
-
-
   <img :src="imagen" alt=""/> <!-- imagen dinámica -->
   <!-- no olvidar colocar el ":src="para colocar la constante computada" -->
   <br>
-  <button @:click="siguiente"> Siguiente ({{ contador + 1 }}/{{total}})</button>
-  <button @:click="atras"> Atrás ({{ contador }}/{{total}})</button>
+  <boton /> 
+ 
 </div>
 </template>
 
-<script setup>
-import {ref, computed} from "vue"; //hacer reactivos estos script
 
+
+<script setup>
+
+
+import {ref, computed} from "vue"; //hacer reactivos estos script
 import {productos} from "./datos.js" //importar el archivo dato.js para que traiga el array
+import boton from "./components/boton.vue"
 
 const contador = ref(0)
 const total = productos.length //este length me dara el valor de la longitud de este array 
 const ruta = "https://www.html6.es/img/rey_";
 
-const siguiente = ()=>{ 
-  contador.value++ 
-
-  if(contador.value>=total) //si el valor de contador es mayor o igual que la longitud total del []
-  contador.value=0; //el contador vuelva a su valor 0, en este caso lo expresará como 1 por sumar valor 0del[]+1
-//con esta funcion hago que al hacer siguiente vuelva a empezar si el valor del contador supera el total de elementos del Array
-
-};
-
-const atras = ()=>{ 
-  contador.value-- 
-
-  if(contador.value>=total) //si el valor de contador es mayor o igual que la longitud total del []
-  contador.value=0;
-}; 
 
 const rey = computed (()=>{ //esto es una propiedad computada, se utiliza COMPUTED
   const elNombre=productos[contador.value].nombre.toLowerCase();  //atento a contador.value
@@ -98,15 +85,6 @@ const nuevoPrecio = computed(()=>{
   width: 5rem;
   height: auto;
   
-}
-
-button{
-  margin: 1rem;;
-  border: none;
-  padding: 1rem;
-  width: 25rem;
-  font-size: 1rem;
-  border-radius: 0.5rem;
 }
 
 .descuento{
