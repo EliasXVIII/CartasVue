@@ -8,8 +8,10 @@
  import {ref, defineEmits} from "vue"
  defineEmits(["siguiente", "atras"]); 
 
+ import { productos } from "../datos.js"; 
+
  const contador = ref(0);
- const total = 10;
+ 
 
 /* const siguiente = ()=>{ 
   contador.value++ ;
@@ -19,15 +21,17 @@
   contador.value++; // Incrementa el contador
 
   // Verifica si el contador ha alcanzado el valor total
-  if (contador.value >= total) {
+  if (contador.value >= productos.length) {
     contador.value = 0; // Reinicia el contador a 0 si es igual o mayor que el total
   }
 };
 const atras = ()=>{ 
   contador.value--;
 
-  if(atras = contador) //si el valor de contador es mayor o igual que la longitud total del []
-  contador.value=0;
+  if(contador.value<0){
+contador.value=productos.length -1;
+  } //si el valor de contador es mayor o igual que la longitud total del []
+  
   emit("atras",contador.value);
 }; 
 
