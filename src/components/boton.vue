@@ -11,7 +11,7 @@
  import { productos } from "../datos.js"; 
 
  const contador = ref(0);
- 
+ const total  = productos.length;
 
 /* const siguiente = ()=>{ 
   contador.value++ ;
