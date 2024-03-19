@@ -1,29 +1,36 @@
-# proyectoCartas del Rey Godo - VUE -
+# Proyecto Cartas del Rey Godo - VUE -
 <br>
 
-![ReyMuerto](https://www.html6.es/img/rey_ervigio.png)
-![ReyPuesto](https://www.html6.es/img/rey_atanagildo.png)
+![ReyMuerto](https://www.html6.es/img/rey_ervigio.png) ![ReyPuesto](https://www.html6.es/img/rey_atanagildo.png)
+<br />
 
-![HTML](https://camo.githubusercontent.com/bfe6a48836e87b13a16f1f56f88fee428475c2ac29247992ec9b8bcc7154f881/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f48544d4c352d4533344632363f7374796c653d666f722d7468652d6261646765266c6f676f3d68746d6c35266c6f676f436f6c6f723d7768697465)
-![CSS](https://camo.githubusercontent.com/472c222e8f240a48ae51cd9b082a1b857be809dcd851a25150890c2da50c13a5/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f435353332d3135373242363f7374796c653d666f722d7468652d6261646765266c6f676f3d63737333266c6f676f436f6c6f723d7768697465)
+![VUE.JS](https://img.shields.io/badge/Vue%20js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
+![VITE](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![NODE](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![NPM](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+![TRELLO](https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white)
+![CANVA](https://img.shields.io/badge/Canva-%2300C4CC.svg?&style=for-the-badge&logo=Canva&logoColor=white)
 
+## Objetivo del proyecto
 
+El objetivo de este proyecto es cumplir con requerimiento de una actividad educativa en la que nos inicia en el desarrollo con VUE.
+A traves de investigaciones individuales y puesta en común de todos los conocimientos adquiridos realizamos el siguiente proyecto que muestra diferentes condicionales según se elige 1 personaje u otro y según sus requerimientos veremos las diferentes condiciones que tienen configuradas.
+Se realizó una presentación en Canva que fue expuesta para mostrar toda la información acopiada y de esta manera poder compartir este conocimiento con otros estudiantes del bootcamp de Peñascal F5 de Bilbao.
 
-
-This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Inicializar el proyecto
+ Clona el repositorio:
+    ```bash
+    git clone https://github.com/EliasXVIII/CartasVue.git
+    ```
 
 ```sh
-npm install
+npm install 
 ```
 
 ### Compile and Hot-Reload for Development
@@ -31,9 +38,10 @@ npm install
 ```sh
 npm run dev
 ```
+## Colaboradores
+- [Tina Calleja](https://www.linkedin.com/in/tina-calleja/)
+- [Elias Riquelme](https://www.linkedin.com/in/elias-javier-riquelme-b62655297/)
+- [Ana Iashvili](https://www.linkedin.com/in/anaiashvili/)
+- [Djebbour Kelthoum](https://www.linkedin.com/in/djebbour-kelthoum-438071258/)
 
-### Compile and Minify for Production
 
-```sh
-npm run build
-```
