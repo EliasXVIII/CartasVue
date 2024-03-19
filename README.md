@@ -40,10 +40,10 @@ npm install
 npm run dev
 ```
 ## Colaboradores
-- [Tina CallejaLinkedIn](https://www.linkedin.com/in/tina-calleja/)
-- [Elias Riquelme](https://www.linkedin.com/in/elias-javier-riquelme-b62655297/)
-- [Ana Iashvili](https://www.linkedin.com/in/anaiashvili/)
-- [Djebbour Kelthoum](https://www.linkedin.com/in/djebbour-kelthoum-438071258/)
+- [Tina Calleja LinkedIn](https://www.linkedin.com/in/tina-calleja/)
+- [Elias Riquelme LinkedIn](https://www.linkedin.com/in/elias-javier-riquelme-b62655297/)
+- [Ana Iashvili LinkedIn](https://www.linkedin.com/in/anaiashvili/)
+- [Djebbour Kelthoum LinkedIn](https://www.linkedin.com/in/djebbour-kelthoum-438071258/)
 
 ## Futuras Mejoras.
 
