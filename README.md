@@ -44,4 +44,9 @@ npm run dev
 - [Ana Iashvili](https://www.linkedin.com/in/anaiashvili/)
 - [Djebbour Kelthoum](https://www.linkedin.com/in/djebbour-kelthoum-438071258/)
 
+## Futuras Mejoras.
+
+Queremos desarrollar la misma plantilla con diferentes Mujeres que han sido destacadas en la historia por sus logros personales y colectivos. 
+Quien quiera hacer colaboraciones de mejora estaremos encantados de ello.
+
 
