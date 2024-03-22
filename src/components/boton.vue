@@ -1,46 +1,47 @@
 <template>
-  <button @click="siguiente"> Siguiente ({{ contador + 1 }}/{{total}})</button>
-  <button @click="atras"> Atrás ({{ contador }}/{{total}})</button>
+  <div>
+    <button @click="siguiente">Siguiente ({{ contador + 1 }}/{{ total }})</button>
+    <button @click="atras">Atrás ({{ contador }}/{{ total }})</button>
+    <img :src="imagen" alt="">
+  </div>
 </template>
 
 <script setup>
+import { ref, defineEmits, watchEffect } from "vue";
+import { productos } from "../datos.js";
 
- import {ref, defineEmits} from "vue"
- defineEmits(["siguiente", "atras"]); 
+defineEmits(["siguiente", "atras"]);
 
- import { productos } from "../datos.js"; 
+const contador = ref(0);
+const total = productos.length;
+const ruta = "https://www.html6.es/img/rey_"; // Cambiar la ruta por la ruta correcta
 
- const contador = ref(0);
- const total  = productos.length;
-
-/* const siguiente = ()=>{ 
-  contador.value++ ;
- /*  emit("siguiente",contador.value); */
-  
- const siguiente = () => { 
-  contador.value++; // Incrementa el contador
-
-  // Verifica si el contador ha alcanzado el valor total
-  if (contador.value >= productos.length) {
-    contador.value = 0; // Reinicia el contador a 0 si es igual o mayor que el total
+const siguiente = () => {
+  contador.value++;
+  if (contador.value >= total) {
+    contador.value = 0;
   }
 };
-const atras = ()=>{ 
+
+const atras = () => {
   contador.value--;
+  if (contador.value < 0) {
+    contador.value = total - 1;
+  }
+};
 
-  if(contador.value<0){
-contador.value=productos.length -1;
-  } //si el valor de contador es mayor o igual que la longitud total del []
-  
-  emit("atras",contador.value);
-}; 
+const imagen = ref('');
 
+
+watchEffect(() => {
+  imagen.value = `${ruta}${productos[contador.value].nombre.toLowerCase()}.png`;
+});
 
 </script>
 
 <style scoped>
-button{
-  margin: 1rem;;
+button {
+  margin: 1rem;
   border: none;
   padding: 1rem;
   width: 25rem;
